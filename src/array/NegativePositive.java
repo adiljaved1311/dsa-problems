@@ -1,5 +1,5 @@
 package array;
-
+// Given an array of integers modify the array as all negative numbers comes first and positive numbers comes after
 public class NegativePositive {
 
 	public static void main(String[] args) 

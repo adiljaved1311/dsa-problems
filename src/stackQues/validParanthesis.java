@@ -31,7 +31,7 @@ public class validParanthesis {
 					 else if(c == ']' && top == '[')
 						 st.pop();
 					 else
-						 st.push(c);
+						 return false;
 				 }
 			 }
 		 }

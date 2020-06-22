@@ -9,6 +9,7 @@ public class Anagram
 		String s1 = "stop";
 		String s2 = "pots";
 		System.out.println(isAnagram1(s1,s2));
+		System.out.println(isAnagram2(s1,s2));
 		System.out.println(isAnagram3(s1,s2));
 	}
 	
@@ -54,6 +55,7 @@ public class Anagram
 	        }
 	    }
 	
+	    
 	    public static boolean isAnagram2(String s, String t) { // T->O(nlogn) S->O(n)
 	        if (s.length() != t.length()) {
 	            return false;

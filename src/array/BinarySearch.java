@@ -1,7 +1,7 @@
 package array;
 
 public class BinarySearch {
-
+	
 	public static void main(String[] args) 
 	{
 		int a[] = {0,1,2,3,4,6,8,10,11,12,15};
@@ -11,12 +11,12 @@ public class BinarySearch {
 	{
 		int upper = a.length-1;
 		int lower = 0;
-		while(lower<=upper)
+		while(lower <= upper)
 		{
 			int mid = (lower+upper)/2;
 			if(a[mid] == n)
 				return mid;
-			else if(n>a[mid])
+			else if(n > a[mid])
 				lower = mid+1;
 			else
 				upper = mid-1;

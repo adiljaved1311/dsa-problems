@@ -5,11 +5,12 @@ public class LongestSubArrayBysum {
 	public static void main(String[] args) 
 	{
 		int a[] = {1,2,3,4,5,0,0,0,6,8,9};
-		a = longestSubArray(a,15);
+		int sum = 15;
+		a = longestSubArray(a,sum);
 		for(int x:a)
 			System.out.print(x+" ");
 	}
-	public static int[] longestSubArray(int a[],int s)
+	public static int[] longestSubArray(int a[],int s) // return the starting and ending index
 	{
 		int [] result = new int[] {-1};
 		int sum=0;
@@ -25,7 +26,7 @@ public class LongestSubArrayBysum {
 				left++;
 			}
 			if(sum == s &&(result.length == 1 || result[1] - result[0] < right-left))
-				result = new int[] {left+1,right+1}; //1,5  1,8
+				result = new int[] {left,right}; //0,4  0,7
 			
 			right++;
 		}

@@ -1,5 +1,8 @@
 package array;
 import java.util.*;
+
+// Given two Arrays and a sum you have to return true if the sum numbers present one from first array and another
+// from second array otherwise if not then return false;
 public class SumOfTwo 
 {
 	public static void main(String[] args) 

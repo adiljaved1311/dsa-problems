@@ -6,8 +6,8 @@ import java.util.*;
 //   You may assume that each input would have exactly one solution,
 //   and you may not use the same element twice
 
-//   Given nums = [2, 7, 11, 15], target = 9,
-//   Because nums[0] + nums[1] = 2 + 7 = 9,
+//   Given numbers = [2, 7, 11, 15], target = 9,
+//   Because numbers[0] + numbers[1] = 2 + 7 = 9,
 //   return [0, 1].
 
 public class TwoSum {
@@ -44,7 +44,7 @@ public class TwoSum {
 		return res;
 	}
 	
-	//Another approach by using hashmap
+	//Another approach by using HashMap
 	public static int[] twoSum2(int a[],int target)     //T-> O(n) and S-> O(n)
 	{
 		int res[] = {-1,-1};
@@ -65,7 +65,7 @@ public class TwoSum {
 	}
 	
 	
-	
+	// for returning all possible pairs
 	public static List<List<Integer>> twoSum3(int a[],int target)     //T-> O(n) and S-> O(n)
 	{
 		// 2,7,11,3,15     target = 18    Output = {1,2}, {3,4}           
@@ -95,7 +95,7 @@ public class TwoSum {
 	
 	public static List<List<Integer>> twoSum4(int a[],int target)     //No Duplicate Pairs
 	{
-		// 2,7,11,15,3,16,3,9    target = 18    Output = {1,2}, {3,4} {0,5} {7,8}        
+		// 2,7,11,15,3,16,3,9    target = 18    Output = {1,2}, {3,4} {0,5} {3,6}        
 		List<List<Integer>> list = new ArrayList<>();
 		List<Integer> l1 = new ArrayList<>();
 		List<Integer> l2 = new ArrayList<>();
@@ -104,6 +104,7 @@ public class TwoSum {
 		
 		for(int i=0; i<a.length; i++){
 			diff = target-a[i];
+			
 			if(map.containsKey(a[i]) == true){
 				if(diff == a[i]){
 				l1.add(map.get(diff));      // Time - > O(n)

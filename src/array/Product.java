@@ -1,10 +1,10 @@
 package array;
 
-public class Product {
+//Product of array elements except self
 
+public class Product {
 	public static void main(String[] args) 
 	{
-		// Product of array elements except self
 		int a[] = {1,2,3,4};
 		int b[] = {2,3,4,1};
 		a = product1(a);
@@ -44,6 +44,7 @@ public class Product {
 			
 		return output;
 	}
+	// Without using division operator
 	public static int[] product3(int a[])   // T-> O(n)  S->O(n)
 	{
 		int n = a.length;    //  1,2,4,3
@@ -73,13 +74,13 @@ public class Product {
 		int[] output = new int[a.length];     //  2,3,4,1
 		int temp = a[0];
 		output[0] = 1;
-		for(int i=1; i<a.length; i++)
+		for(int i=1; i<a.length; i++)   // left products
 		{
 			output[i] = temp;
 			temp = temp*a[i];
 		}
 		temp = a[a.length-1];
-		for(int i=a.length-2; i>=0; i--)
+		for(int i=a.length-2; i>=0; i--)  // right products
 		{
 			output[i] = temp*output[i];
 			temp = temp*a[i];

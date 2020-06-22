@@ -4,9 +4,9 @@ public class RotatedShiftArray {
 
 	public static void main(String[] args) {
 		int a[] = {9,12,15,17,19,2,4,5,7,8};
-		int b[] = {2,4,5,7,8,9,12,15,17,19};
+		//int b[] = {2,4,5,7,8,9,12,15,17,19};
 		int rotation = countRotation(a);
-		int r = countRotation(b);
+		int r = countRotation(a);
 		System.out.println(rotation);
 		System.out.println(r);
 	}

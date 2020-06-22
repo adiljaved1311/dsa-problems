@@ -38,9 +38,9 @@ public class MaxFrquency
     return max_num;
 }
 
-public static int maxfrequency3(int a[])  // For Sorted Array
+public static int maxfrequency3(int a[])     // For Sorted Array
 {
-    int max_frequency = 0;               // Time -> O(n)  &  Space -> O(1)
+    int max_frequency = 0;                   // Time -> O(n)  &  Space -> O(1)
     int max_num = a[0];
     int counter = 1;
     for(int i=0;i<a.length-1; i++)
@@ -66,7 +66,7 @@ public static int maxfrequency3(int a[])  // For Sorted Array
     return max_num;
 }
 	
-	private static int maxFrequency1(int a[])  // O(n^2)
+	private static int maxFrequency1(int a[])         // O(n^2)
 	{
 		int num=a[0],counter=0,maxCounter=0;
 		for(int i=0; i<a.length; i++)

@@ -1,17 +1,17 @@
 package array;
 
 import java.util.*;
-// given an array and a sum return the indices of the pairs having the sum in he array
+// given an array and a sum return the elements of the pairs having the sum in he array
 public class SumPair {
 
 	public static void main(String[] args) 
 	{
 		int a[] = {2,5,8,7,3,6};
-		m1(a,10);
+		sumPair1(a,10);
 		System.out.println();
-		m2(a,10);
+		sumPair2(a,10);
 	}
-	public static void m1(int a[],int sum)  // O(n^2)
+	public static void sumPair1(int a[],int sum)  // O(n^2)
 	{
 		for(int i = 0;i<a.length-1;i++)
 		{
@@ -24,7 +24,7 @@ public class SumPair {
 			}
 		}
 	}
-	public static void m2(int a[],int sum)   // O(nlogn)
+	public static void sumPair2(int a[],int sum)   // O(nlogn)
 	{
 		Arrays.sort(a);
 		int left = 0, right = a.length-1;

@@ -3,7 +3,7 @@ import java.util.*;
 public class InfixToPostfix1 {
 
 	public static void main(String[] args) {
-		String exp = "a+b*c-d/e";
+		String exp = "a+b*c-d/e+f-g";
 		System.out.println(infixToPostfix(exp));
 	}
 	// +,- -> 1
@@ -29,9 +29,11 @@ public class InfixToPostfix1 {
 					if(current <= in_stackTop)   // if lower precedence operator is inside the stack and higher is outside then push it 
 					{    
 						while(st.isEmpty() == false && current <= priority(st.peek()))
-							postfix += st.pop();    // if higher precedence operator is already present inside stack then pop out
-					}
-					st.push(arr[i]);
+                        {
+                            postfix += st.pop();   // if current operator is lower or equal to stack top operator then pop out
+                        }                          // until the current operator is higher than stack top operator
+                    }
+                    st.push(arr[i]);  // if current operator is higher than stack top operator then push it 
 				}	
 			}else
 			{

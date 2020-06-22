@@ -1,5 +1,6 @@
 package array;
-
+// Given a sorted array of integers having negative and positive value, you have to return a new array which
+// is squares of each element of array and this array must be sorted.
 public class Square 
 {
 	public static void main(String[] args) 

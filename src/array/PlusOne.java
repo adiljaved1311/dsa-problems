@@ -1,9 +1,17 @@
 package array;
 import java.util.*;
+/*
+  Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+
+  The digits are stored such that the most significant digit is at the head of the list, and each 
+  element in the array contain a single digit.
+  Input: [1,2,3] Output: [1,2,4]  Explanation: The array represents the integer 123.
+  Input: [9,9,9] Output: [1,0,0,0]
+*/
 public class PlusOne {
 
 	public static void main(String[] args) {
-		int input[] = {1,5,8};
+		int input[] = {9,9,9};
 		int output[] = plusOne4(input);
 		for(int x:output)
 			System.out.print(x+" ");
@@ -22,6 +30,7 @@ public class PlusOne {
         	output = new int[digits.length];  // Time-> O(n) Space-> O(n)
         }else
         	output = new int[digits.length+1];
+        
         int c=1; // carry
         int i = digits.length-1; // starting from the last index
         while(i >= 0){

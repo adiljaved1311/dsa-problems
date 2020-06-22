@@ -10,7 +10,7 @@ public class BinarySort {
 			System.out.print(x+" ");
 	}
 	
-	public static void binarySort1(int a[])
+	public static void binarySort1(int a[])   // Time -> O(n) Space -> O(1)
     {
         int i = 0;
         for(int j=0;j<a.length;j++) {

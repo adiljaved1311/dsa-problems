@@ -4,21 +4,34 @@ public class LongestSubstringWithoutReapeating {
 
 	public static void main(String[] args) 
 	{
-		String s = "abcabcbb";   // 3
+		String s = "dvdf";   // 3
+		System.out.println(lengthOfLongestSubstring(s));
 	}
-	public static int longestSubstring(String s)
-	{
-		HashSet<Character> hs = new HashSet();
-		int count = 0;
-		for(int i=0; i<s.length(); i++)
-		{
-			char c1 = s.charAt(i);
-			for(int j=i+1; j<s.length(); j++)
-			{
-				char c2 = s.charAt(j);
-				
-			}	
-		}
-		return -1;
-	}
+	public static String lengthOfLongestSubstring(String s) {
+        int current_range = 0;
+        int max_range = 0;
+        String tempResult = "";
+        String result = "";
+        HashSet<Character> set = new HashSet<>();
+        for(int i=0; i<s.length(); i++)
+        {
+        	int k = i;
+            while(k<s.length() && set.add(s.charAt(k)))
+            {
+            	tempResult += s.charAt(k);
+                k++;
+                current_range++; 
+            }
+            set.clear();
+            if(max_range < current_range)
+            {
+                max_range = current_range;
+                result = tempResult;
+            }
+            current_range = 0;
+            tempResult = "";
+        }
+        return result;
+        //return max_range;
+    }
 }

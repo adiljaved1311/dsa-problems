@@ -19,7 +19,7 @@ public class FirstMissingPositive {
 		HashSet<Integer> set = new HashSet<>();
 		for(int x:a)
 			set.add(x);
-		for(int i=1; i<=a.length ;i++)
+		for(int i=1; i<a.length ;i++)
 		{
 			if(set.contains(i) == false)
 				return i;

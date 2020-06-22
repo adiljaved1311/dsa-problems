@@ -1,5 +1,5 @@
 package array;
-
+// check whether the given array is Palindrome or not
 public class Palindrome {
 
 	public static void main(String[] args) 
