@@ -8,7 +8,7 @@ public class LinkedStack
 		s.push(10);
 		s.push(20);
 		s.push(30);
-		s.pop();
+		System.out.println(s.pop());
 		s.traverse();
 	}
 }
@@ -29,28 +29,32 @@ class StackL
 			top = node; 
 		}
 	}
-	public void pop()
+	public int pop()
 	{
+		int popElement;
 		if(top == null)
 		{
-			System.out.println("stack is empty");
+			throw new RuntimeException("Stack is empty");
 		}else
 		{
 			if(top.next == null)
 			{
-				top =null;
+				popElement = top.num;
+				top = null;
 			}else
 			{
+				popElement = top.num;
 				Node pos = top.next;
 				top.next = null;
 				top = pos;
 			}
+			return popElement;
 		}
 	}
 	public void traverse()
 	{
 		Node pos = top;
-		System.out.println("Elements");
+	
 		while(pos != null)
 		{
 			System.out.println(pos.num);

@@ -4,7 +4,7 @@ public class BinarySort {
 
 	public static void main(String[] args) 
 	{
-		int a[] = {2,1,2,1,0,0,2};
+		int a[] = { 2, 1, 2, 1, 0, 0, 2 };
 		a = binarySort2(a);
 		for(int x:a)
 			System.out.print(x+" ");

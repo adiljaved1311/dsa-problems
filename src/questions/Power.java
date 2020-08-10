@@ -4,8 +4,18 @@ public class Power {
 
 	public static void main(String[] args) 
 	{
-		System.out.println(power(3,14));
-		System.out.println(power1(3,14));
+		System.out.println(power(2,3));
+		System.out.println(power1(2,3));
+		System.out.println(power2(2,3));
+	}
+	public static int power2(int x, int y)
+	{
+		int result = 1;
+		for(int i=1 ;i<=y ;i++)
+		{
+			result = result*x;
+		}
+		return result;
 	}
 	public static int power(int x, int y)  // O(log n)
 	{

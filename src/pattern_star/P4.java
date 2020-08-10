@@ -4,8 +4,8 @@ public class P4
 {
 	public static void main(String[] args) 
 	{
-		int n=5;
-		p4(n);
+		//int n=5;
+		p4(5);
 	}
 	public static void p4(int n)
 	{

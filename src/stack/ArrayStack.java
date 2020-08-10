@@ -7,11 +7,10 @@ public class ArrayStack {
 		Stack st = new Stack(4);
 		st.push(10);
 		st.push(20);
-		st.push(30);
-		st.push(40);
-		st.pop();
-		st.push(50);
-		st.traverse();
+		//st.traverse();
+		System.out.println(st.pop());
+		System.out.println(st.pop());
+		System.out.println(st.pop());
 	}
 }
 
@@ -43,15 +42,16 @@ class Stack
 			stack[top] = num;
 		}
 	}
-	public void pop()
+	public int pop()
 	{
 		if(top == -1)
 		{
-			System.out.println("Stack is empty");
+			//System.out.println("Stack is empty");
+			throw new RuntimeException("Stack is empty");
 		}else
 		{
-			System.out.println("Element poped : "+stack[top]);
-			top--;
+			//System.out.println("Element poped : "+stack[top]);
+			return stack[top--];
 		}
 	}
 	public void traverse()

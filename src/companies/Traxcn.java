@@ -4,12 +4,12 @@ public class Traxcn {
 
 	public static void main(String[] args) {
 		//System.out.println(oddEvenCharacters("TRACXN", 0));
-		printFizzBuzz();
-		//int a[] = {100,180,260,310,40,535,695};
+		//printFizzBuzz();
+		int a[] = {100,180,260,310,40,535,695};
 		//int b[] = {7,1,5,3,6,4};
-		//System.out.println(buyAndSell(b));
-		//System.out.println();
-		//System.out.println(buyAndSell2(b));
+		System.out.println(buyAndSell(a));
+		System.out.println();
+		System.out.println(buyAndSell2(a));
 	}
 
 	public static String oddEvenCharacters(String s, int flag) {
@@ -88,6 +88,7 @@ public class Traxcn {
 			{
 				currentBuyDay = i;
 				currentSellDay = i+1;
+				//System.out.println(currentBuyDay);
 				break;
 			}
 				
@@ -98,7 +99,8 @@ public class Traxcn {
 			{
 				currentSellDay++;
 			}
-			//System.out.println("currentSellDay  "+currentSellDay);  -> 3 (310)
+			
+			System.out.println("currentSellDay  "+currentSellDay);  //-> 3 (310)
 			currentProfit = a[currentSellDay] - a[currentBuyDay];
 			if(currentProfit > maxProfit)
 			{
@@ -112,8 +114,8 @@ public class Traxcn {
 				{
 					currentBuyDay = currentSellDay+1;
 					currentSellDay = currentSellDay+2;
-				}
-				currentSellDay = currentSellDay+1;
+				}else
+					currentSellDay = currentSellDay+1;
 			}	
 		}
 		if(maxProfit == 0)
@@ -123,6 +125,5 @@ public class Traxcn {
 	       {
 	             return "Buy on - Day "+(buyDay)+" - Sell on - Day "+(sellDay)+" - Profit = "+maxProfit;
 	       }
-		
 	}
 }

@@ -22,11 +22,6 @@ public class SinglyLinkedList
 			end = node;
 		}else
 		{
-//			Node pos = head;
-//			while(pos.next != null)
-//			{
-//				pos = pos.next;
-//			}
 			end.next = node;
 			end = node;
 		}
@@ -52,7 +47,7 @@ public class SinglyLinkedList
 		Node node = new Node();
 		node.num = num;
 		Node pos = head;
-		for(int i=1; i<=index-2;i++)
+		for(int i=1; i<=index-2;i++)   // if index start from 0 then start i = 0
 		{
 			pos = pos.next;
 		}
@@ -125,8 +120,8 @@ public class SinglyLinkedList
 			pos = pos.next;
 			current.next = prev;
 			prev = current;
-			head = current;
 		}
+		head = current;
 	}
 	
 	public void size()
@@ -321,6 +316,38 @@ public class SinglyLinkedList
 		return true;
 	}
 	
+	public void halfList() {
+		Node slow = head;
+		Node fast = head;
+		while(fast != null && fast.next != null)
+		{
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		Node pos = slow;
+		Node current = null;
+		Node prev = null;
+		while(pos != null) {
+			current = pos;
+			pos = pos.next;
+			current.next = prev;
+			prev = current;
+		}
+		pos = current;
+		fast = head;
+		while(fast != null)
+		{
+			System.out.print(fast.num+"-> ");
+			fast = fast.next;
+		}
+		System.out.println();
+		while(pos != null)
+		{
+			System.out.print(pos.num+"-> ");
+			pos = pos.next;
+		}
+		System.out.println();
+	}
 }
 
 

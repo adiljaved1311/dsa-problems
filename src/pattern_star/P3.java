@@ -9,13 +9,13 @@ public class P3
 	}
 	public static void p3(int n)
 	{
-		for(int i=0;i<n;i++)
+		for(int i=1;i<=n;i++)
 		{
-			for(int j=n-2;j>=i;j--)
+			for(int j=n-1;j>=i;j--)
 			{
 				System.out.print(" ");
 			}
-			for(int k=i;k>=0;k--)
+			for(int k=i;k>0;k--)
 			{
 				System.out.print("*");
 			}

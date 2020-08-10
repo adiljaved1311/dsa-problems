@@ -4,10 +4,10 @@ public class InfixToPostfix {
 
 	public static void main(String[] args) {
 		String exp = "a+b*c-d/e+f-g";
-		System.out.println(infixToPostfix(exp));
+		System.out.println(infixToPostfix(exp));  // abc*+de/-f+g-
 	}
 	
-	public static String infixToPostfix(String exp)   // Priority -> *,/ -> +,-
+	public static String infixToPostfix(String exp)   // Priority -> (* = /) > (+ = -)
 	{
 		Stack<Character> st = new Stack<>();
 		char arr[] = exp.toCharArray();

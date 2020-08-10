@@ -4,14 +4,9 @@ public class Test
 {
 	public static void main(String[] args) 
 	{
-		binaryToDecimal(101);
-		fibonacci(9);
-		lcm(5,6);
-		hcf(25,30);
-		swap(14,21);
-		printPrime(1,100);
-		strong(146);
-		printArmStrong(1,500);
+		int x = 0100;
+		int y = 1000;
+		System.out.println(x^y);
 	}
 	public static void binaryToDecimal(int n)
 	{

@@ -8,7 +8,68 @@ public class Test
 //		m1(s);
 //		m2(s);
 //		m3(s);
-		System.out.println(reverseVowels("aA"));
+//		System.out.println(reverseVowels("aA"));
+		//test("<>ejd<");
+		System.out.println(receivedText("HE*<LL>O12#2a><fd"));
+		StringBuilder out = new StringBuilder("hjj");
+		System.out.println(out.insert(0,"b"));
+	}
+	
+
+    public static String receivedText(String S) {
+    // WRITE DOWN YOUR CODE HERE
+        //String output = "";
+        StringBuilder out = new StringBuilder("");
+        boolean numLock = true;
+        boolean home = false;
+        boolean end = true;
+        for(int i=0; i<S.length(); i++)
+        {
+            char c = S.charAt(i);
+            if(c == '<'){
+                home = true;
+                end = false;
+            }else if(c == '>'){
+                end = true;
+                home = false;
+            }else if(c == '*'){
+                //output = output.substring(0,output.length()-1);
+                out = new StringBuilder(out.substring(0,out.length()-1));
+            }else if(c == '#'){
+                numLock = true ? false : true;
+            }else{
+                if(end == true){
+                    if(numLock == true)
+                    	out.append(c);
+                        //output += c;
+                    else{
+                        if(!(c >= 48 && c <= 57))
+                            //output += c;
+                        	out.append(c);
+                    }
+                }else{
+                    if(numLock == true)
+                        //output = c+output;
+                    	out.insert(0,c);
+                    else{
+                        if(!(c >= 48 && c <= 57))
+                            //output = c+output;
+                        	out.insert(0,c);
+                    }
+                }    
+            }
+        }
+        return out.toString();
+
+    }
+
+	
+	public static void test(String s) {
+		for(int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			if(c == '<')
+				System.out.println(c);
+		}
 	}
 	
 	public static String reverseSmallVowels(String s) {

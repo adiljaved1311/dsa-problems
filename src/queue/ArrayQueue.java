@@ -28,7 +28,7 @@ class Queue
 	}
 	public void dequeue()
 	{
-		if(front != -1)
+		if(front != -1) // front == rear
 		{
 			System.out.println("Element dequeue "+queue[front++]);
 		}else

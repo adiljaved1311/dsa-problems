@@ -3,7 +3,8 @@ package array;
 public class InsertionSort {
 
 	public static void main(String[] args) {
-		int a[] = { 10, 50 ,20 ,27 ,89 ,12 , 23, 5, 2 };
+		int a[] = {10,50,20,27,89,12,23,5,2};
+		
 		int temp=0;
 		
 		for(int i=1;i<a.length;i++) 

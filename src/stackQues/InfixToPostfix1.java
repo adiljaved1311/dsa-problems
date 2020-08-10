@@ -4,8 +4,9 @@ public class InfixToPostfix1 {
 
 	public static void main(String[] args) {
 		String exp = "a+b*c-d/e+f-g";
-		System.out.println(infixToPostfix(exp));
+		System.out.println(infixToPostfix(exp));  // abc*+de/-f+g-
 	}
+	// Priority
 	// +,- -> 1
 	// *,/ -> 2
 	public static String infixToPostfix(String exp)

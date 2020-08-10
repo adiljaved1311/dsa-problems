@@ -6,7 +6,8 @@ public class Factorial {
 	{
 		System.out.println(factorial(4));
 	}
-	public static int factorial(int num)
+	
+	public static int factorial(int num)   // Time -> O(n)  &&  Space -> O(n) 
 	{
 		if(num == 0 || num == 1)
 			return 1;

@@ -1,12 +1,25 @@
 package array;
+
 // Given am array of natural numbers starting from 1 from which one number is missing find that number
 public class MissingNo 
 {
 	public static void main(String[] args) 
 	{
-		int a[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,16}; //15 is missing
-		System.out.println(m1(a));
-		System.out.println(m2(a));
+		int a[] = {0,1,3,4,5}; //15 is missing
+		System.out.println(m(a));
+		//System.out.println(m2(a));
+	}
+	
+	public static int m(int a[])
+	{
+		int sum = 0;
+		int i;
+		for(i=0; i<a.length; i++)
+		{
+			sum = sum + i - a[i];
+		}
+		sum = sum + i;
+		return sum;
 	}
 	
 	public static int m1(int a[])

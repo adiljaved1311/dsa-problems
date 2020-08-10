@@ -1,10 +1,12 @@
 package array;
 import java.util.*;
+
+// Print the number who is having maximum frequency
 public class MaxFrquency 
 {
 	public static void main(String[] args) 
 	{
-		int a[] = {1,1,2,2,3,3,3,3};
+		int a[] = {1,1,2,2,7,7,7,7};
 		// 1,2,2,3,3,3
 		System.out.println(maxFrequency1(a));
 	}

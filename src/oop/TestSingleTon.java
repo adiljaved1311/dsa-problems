@@ -1,9 +1,8 @@
 package oop;
 
 class SingleTon{
-	static int flag = -1;
 	
-	private SingleTon() {
+	private SingleTon() {               // constructor
 		System.out.println("Hello");
 	}
 	
