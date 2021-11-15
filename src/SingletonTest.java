@@ -1,4 +1,3 @@
-package tavant;
 
 class Singleton {
     private Singleton(){
