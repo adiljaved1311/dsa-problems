@@ -1,6 +1,6 @@
 # Problems on Data Structure and Algorithms.
 
-This repository contains programming questions on data structure and algorithms important for interview. The language used is Java.
+This repository contains programming questions on data structure and algorithms important for interview. The language used is Java .
 
 
 
